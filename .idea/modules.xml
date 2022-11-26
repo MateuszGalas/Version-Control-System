@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Version_Control_System.iml" filepath="$PROJECT_DIR$/.idea/modules/Version_Control_System.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Map/Map with buildMap/Version_Control_System.Topics-Map-Map_with_buildMap.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Map/Map with buildMap/Version_Control_System.Topics-Map-Map_with_buildMap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Map/Map with buildMap/Version_Control_System.Topics-Map-Map_with_buildMap.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Map/Map with buildMap/Version_Control_System.Topics-Map-Map_with_buildMap.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Map/Map with buildMap/Version_Control_System.Topics-Map-Map_with_buildMap.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Map/Map with buildMap/Version_Control_System.Topics-Map-Map_with_buildMap.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Map/Theory/Version_Control_System.Topics-Map-Theory.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Map/Theory/Version_Control_System.Topics-Map-Theory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Map/Theory/Version_Control_System.Topics-Map-Theory.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Map/Theory/Version_Control_System.Topics-Map-Theory.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Map/Theory/Version_Control_System.Topics-Map-Theory.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Map/Theory/Version_Control_System.Topics-Map-Theory.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/Version_Control_System.util.iml" filepath="$PROJECT_DIR$/.idea/modules/util/Version_Control_System.util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/Version_Control_System.util.main.iml" filepath="$PROJECT_DIR$/.idea/modules/util/Version_Control_System.util.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/Version_Control_System.util.test.iml" filepath="$PROJECT_DIR$/.idea/modules/util/Version_Control_System.util.test.iml" />
+    </modules>
+  </component>
+</project>
