@@ -1,0 +1,14 @@
+type: code
+files:
+- name: src/Main.kt
+  visible: true
+  text: "fun main() {\n    var backFromTheWall = readLine()!!.split(',').map { it\
+    \ }.toTypedArray()\n    val returnedWatchman = readLine()!!.toString()  \n   \
+    \ // do not touch the lines above\n    // write your code here   \n\n}"
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/11488#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Sun, 27 Nov 2022 12:42:41 UTC"
+record: -1
