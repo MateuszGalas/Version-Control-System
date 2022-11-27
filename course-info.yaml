@@ -9,4 +9,5 @@ summary: "The ability to roll back to the previous versions is crucial for softw
 programming_language: Kotlin
 content:
 - Topics
+- Version Control System
 mode: Study

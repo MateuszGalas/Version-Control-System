@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="11" />
+    <bytecodeTargetLevel target="17">
+      <module name="Version_Control_System.Topics-Arrays-Initializing_an_array.main" target="12" />
+      <module name="Version_Control_System.Topics-Arrays-Initializing_an_array_of_characters.main" target="12" />
+      <module name="Version_Control_System.Topics-Arrays-Initializing_an_array_of_integers.main" target="12" />
+      <module name="Version_Control_System.Topics-Arrays-Printing_the_last_element.main" target="12" />
+      <module name="Version_Control_System.Topics-Arrays-The_first_element_of_an_array.main" target="12" />
+      <module name="Version_Control_System.Topics-Arrays-Theory.main" target="12" />
+      <module name="Version_Control_System.Topics-Map-Map_with_buildMap.main" target="12" />
+      <module name="Version_Control_System.Topics-Map-Theory.main" target="12" />
+      <module name="Version_Control_System.Topics-String_arrays-Guard_On_The_Gate.main" target="12" />
+      <module name="Version_Control_System.Topics-String_arrays-Initialization.main" target="12" />
+      <module name="Version_Control_System.Topics-String_arrays-Theory.main" target="12" />
+      <module name="Version_Control_System.Topics-The_main___function-But_what's_it_for.main" target="12" />
+      <module name="Version_Control_System.Topics-The_main___function-Change_program_arguments.main" target="12" />
+      <module name="Version_Control_System.Topics-The_main___function-Program_start.main" target="12" />
+      <module name="Version_Control_System.Topics-The_main___function-Select_an_entry_point.main" target="12" />
+      <module name="Version_Control_System.Topics-The_main___function-Theory.main" target="12" />
+      <module name="Version_Control_System.util.main" target="12" />
+      <module name="Version_Control_System.Version_Control_System-task.main" target="12" />
+    </bytecodeTargetLevel>
   </component>
 </project>

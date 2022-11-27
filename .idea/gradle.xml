@@ -5,6 +5,7 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="delegatedBuild" value="false" />
+        <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
@@ -21,6 +22,12 @@
             <option value="$PROJECT_DIR$/Topics/String arrays/Guard On The Gate" />
             <option value="$PROJECT_DIR$/Topics/String arrays/Initialization" />
             <option value="$PROJECT_DIR$/Topics/String arrays/Theory" />
+            <option value="$PROJECT_DIR$/Topics/The main() function/But what's it for" />
+            <option value="$PROJECT_DIR$/Topics/The main() function/Change program arguments" />
+            <option value="$PROJECT_DIR$/Topics/The main() function/Program start" />
+            <option value="$PROJECT_DIR$/Topics/The main() function/Select an entry point" />
+            <option value="$PROJECT_DIR$/Topics/The main() function/Theory" />
+            <option value="$PROJECT_DIR$/Version Control System/task" />
             <option value="$PROJECT_DIR$/util" />
           </set>
         </option>
