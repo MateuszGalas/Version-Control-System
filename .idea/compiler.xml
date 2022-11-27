@@ -8,6 +8,16 @@
       <module name="Version_Control_System.Topics-Arrays-Printing_the_last_element.main" target="12" />
       <module name="Version_Control_System.Topics-Arrays-The_first_element_of_an_array.main" target="12" />
       <module name="Version_Control_System.Topics-Arrays-Theory.main" target="12" />
+      <module name="Version_Control_System.Topics-Errors_in_programs-Theory.main" target="12" />
+      <module name="Version_Control_System.Topics-Errors_in_programs-What's_wrong.main" target="12" />
+      <module name="Version_Control_System.Topics-Functions_as_objects-Function_generator.main" target="12" />
+      <module name="Version_Control_System.Topics-Functions_as_objects-Theory.main" target="12" />
+      <module name="Version_Control_System.Topics-Lambda_expressions-_Not__predicate.main" target="12" />
+      <module name="Version_Control_System.Topics-Lambda_expressions-Capturing_variable.main" target="12" />
+      <module name="Version_Control_System.Topics-Lambda_expressions-Function_composition.main" target="12" />
+      <module name="Version_Control_System.Topics-Lambda_expressions-Max.main" target="12" />
+      <module name="Version_Control_System.Topics-Lambda_expressions-Polynomial.main" target="12" />
+      <module name="Version_Control_System.Topics-Lambda_expressions-Theory.main" target="12" />
       <module name="Version_Control_System.Topics-Map-Map_with_buildMap.main" target="12" />
       <module name="Version_Control_System.Topics-Map-Theory.main" target="12" />
       <module name="Version_Control_System.Topics-String_arrays-Guard_On_The_Gate.main" target="12" />
@@ -19,6 +29,10 @@
       <module name="Version_Control_System.Topics-The_main___function-Select_an_entry_point.main" target="12" />
       <module name="Version_Control_System.Topics-The_main___function-Theory.main" target="12" />
       <module name="Version_Control_System.util.main" target="12" />
+      <module name="Version_Control_System.Version_Control_System-task-build-classes-kotlin.main" target="12" />
+      <module name="Version_Control_System.Version_Control_System-task-build-reports-tests.main" target="12" />
+      <module name="Version_Control_System.Version_Control_System-task-build-test-results.main" target="12" />
+      <module name="Version_Control_System.Version_Control_System-task-build-tmp.main" target="12" />
       <module name="Version_Control_System.Version_Control_System-task.main" target="12" />
     </bytecodeTargetLevel>
   </component>
