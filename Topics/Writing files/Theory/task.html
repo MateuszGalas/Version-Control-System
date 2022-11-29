@@ -1,5 +1,5 @@
 <h2>Writing files</h2>
-<html><body><p>You can do a lot of interesting things with files: for example, you can read content from them or write something new. In this topic you will learn how to write files. There are different ways to write a file in Kotlin. We won't consider all of them here: let's start with the selected basics.</p>
+<p>You can do a lot of interesting things with files: for example, you can read content from them or write something new. In this topic you will learn how to write files. There are different ways to write a file in Kotlin. We won't consider all of them here: let's start with the selected basics.</p>
 <h5 id="writing-files-with-writetext">Writing files with writeText()</h5>
 <p>You may already know that the main class for working with files is <code class="language-kotlin">java.io.File</code>, and Kotlin library adds some features through the extension functions. An object of  <code class="language-kotlin">File</code> type just provides a reference with the path to a file. First, you need to import this library:</p>
 <pre><code class="language-kotlin">import java.io.File
@@ -65,4 +65,4 @@ File(fileName).appendBytes(arrayOfBytes)</code></pre>
 <p>Note, these functions work with <code class="language-kotlin">ByteArray</code>. The <code class="language-kotlin">Array</code> structure is similar to the <code class="language-kotlin">MutableList</code>, you cannot resize it, but you can modify elements. You can easily convert <code class="language-kotlin">MutableList</code> to <code class="language-kotlin">ByteArray</code> and vice versa with <code class="language-kotlin">toByteArray()</code> and <code class="language-kotlin">toMutableList()</code> functions.</p>
 <h5 id="conclusion">Conclusion</h5>
 <p>We've looked at the <code class="language-kotlin">writeText()</code> function, which is used to write or overwrite a file, and <code class="language-kotlin">appendText()</code> used for adding something new. For a better view of the text, benefit from escape sequences, and for a better view of the code, take the path to the file into a separate variable.</p>
-<p>Now you know how to write and edit files: you are fully armed and ready to go!</p></body></html>
+<p>Now you know how to write and edit files: you are fully armed and ready to go!</p>
