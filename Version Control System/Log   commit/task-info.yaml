@@ -377,5 +377,27 @@ files:
     }
   learner_created: false
 feedback_link: https://hyperskill.org/learn/step/13044#comment
-status: Unchecked
+status: Failed
+feedback:
+  message: |-
+    Wrong answer in test #6
+
+    Could not find vcs\commits folder after executing config command.
+
+    Make sure vcs\commits folder and vcs\log.txt file are being created by the program.
+
+    Please find below the output of your program during this failed test.
+
+    ---
+
+    Arguments for MainKt: config Marie172
+    Arguments for MainKt: add first_file.txt
+    Arguments for MainKt: add second_file.txt
+    Arguments for MainKt: commit &quot;Test message&quot;
+
+    The username is Marie172.
+    Add a file to the index.
+    The file &#39;second_file.txt&#39; is tracked.
+    Save changes.
+  time: "Wed, 30 Nov 2022 16:55:50 UTC"
 record: -1
