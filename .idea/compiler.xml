@@ -20,6 +20,11 @@
       <module name="Version_Control_System.Topics-Lambda_expressions-Theory.main" target="12" />
       <module name="Version_Control_System.Topics-Map-Map_with_buildMap.main" target="12" />
       <module name="Version_Control_System.Topics-Map-Theory.main" target="12" />
+      <module name="Version_Control_System.Topics-Secondary_constructor-Creating_news.main" target="12" />
+      <module name="Version_Control_System.Topics-Secondary_constructor-Frozen_desserts.main" target="12" />
+      <module name="Version_Control_System.Topics-Secondary_constructor-Spot_the_error.main" target="12" />
+      <module name="Version_Control_System.Topics-Secondary_constructor-Theory.main" target="12" />
+      <module name="Version_Control_System.Topics-Secondary_constructor-This_keyword.main" target="12" />
       <module name="Version_Control_System.Topics-String_arrays-Guard_On_The_Gate.main" target="12" />
       <module name="Version_Control_System.Topics-String_arrays-Initialization.main" target="12" />
       <module name="Version_Control_System.Topics-String_arrays-Theory.main" target="12" />

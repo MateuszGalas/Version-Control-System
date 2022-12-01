@@ -1,0 +1,21 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: It represents a class
+- text: It represents the current state
+- text: It represents a variable
+- text: It represents the current object
+files:
+- name: src/Main.kt
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    fun main(args: Array<String>) {
+      // put your code here
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/20607#comment
+status: Solved
+record: -1
+local_check: false

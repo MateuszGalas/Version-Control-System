@@ -6,6 +6,12 @@ import java.security.MessageDigest
 fun config(name: String = ""): String {
     val file = File("vcs\\config.txt")
 
+    val commitFile = File("vcs\\commits")
+    val logFile = File("vcs\\log.txt")
+
+    if (!commitFile.exists()) commitFile.mkdir()
+    if (!logFile.exists()) logFile.createNewFile()
+
     if (!file.exists()) {
         file.createNewFile()
         file.writeText("Please, tell me who you are.")
@@ -43,6 +49,7 @@ fun add(name: String = "") {
 fun commit(message: String = "") {
     val commitFile = File("vcs\\commits")
     val logFile = File("vcs\\log.txt")
+    var changed = true
 
     if (!commitFile.exists()) commitFile.mkdir()
     if (!logFile.exists()) logFile.createNewFile()
@@ -55,56 +62,72 @@ fun commit(message: String = "") {
         return
     }
 
-    val mess = message.split(" ")
-    val extention = mess.last().split(".")
-    val author = config().split(" ").last().split(".").first()
-
-    if (extention.last() == "txt")
-    {
-        val file = File("vcs\\commits\\${message.toMD5()}")
-
-        if (!file.exists()) {
-            file.mkdir()
-        }
-
-        val file2 = File("vcs\\commits\\${message.toMD5()}\\${mess.last()}")
-        if (!file2.exists()) {
-            file2.createNewFile()
-            file2.writeText("Author: $author\n")
-            file2.appendText(message)
-        } else {
-            file2.writeText("Author: $author\n")
-            file2.appendText(message)
-        }
-        logFile.appendText(file2.readText())
-    } else {
-        println("Changes are committed.")
-    //logFile.appendText()
+    val changes = logFile.readLines()
+    for (i in changes) {
+        if (i == "commit ${message.toMD5()}") changed = false
     }
+
+    if (changed) {
+        val author = config().split(" ").last().split(".").first()
+        logFile.writeText("commit ${message.toMD5()}\n")
+        logFile.appendText("Author: $author\n")
+        logFile.appendText("$message\n\n")
+        println("Changes are committed.")
+    } else {
+        println("Nothing to commit.")
+    }
+
+//    val mess = message.split(" ")
+//    val extention = mess.last().split(".")
+//    val author = config().split(" ").last().split(".").first()
+//
+//    if (extention.last() == "txt")
+//    {
+//        val file = File("vcs\\commits\\${message.toMD5()}")
+//
+//        if (!file.exists()) {
+//            file.mkdir()
+//        }
+//
+//        val file2 = File("vcs\\commits\\${message.toMD5()}\\${mess.last()}")
+//        if (!file2.exists()) {
+//            file2.createNewFile()
+//            file2.writeText("Author: $author\n")
+//            file2.appendText(message)
+//        } else {
+//            file2.writeText("Author: $author\n")
+//            file2.appendText(message)
+//        }
+//        logFile.appendText(file2.readText())
+//    } else {
+//        println("Changes are committed.")
+//    //logFile.appendText()
+//    }
 }
 
 fun log(): String {
-    val logFile = File("vcs\\commits")
+    val logFile = File("vcs\\log.txt")
     var txt = ""
 
     if (!logFile.exists())  return "No commits yet."
-    if (logFile.isDirectory && logFile.listFiles().isEmpty()) return "No commits yet."
+    if (logFile.isFile && logFile.readText().isEmpty()) return "No commits yet."
 
+    return logFile.readText()
     //logFile.walk(FileWalkDirection.TOP_DOWN).forEach { if (it.isFile) println(it.readText()) else println(it) }
-    for (i in logFile.listFiles()) {
-        if (i.isDirectory) {
-            txt += "commit ${i.name}\n"
-            for (j in i.listFiles()) {
-                txt += j.readText()
-                txt += "\n"
-            }
-            txt += "\n"
-        }
-    }
+//    for (i in logFile.listFiles()) {
+//        if (i.isDirectory) {
+//            txt += "commit ${i.name}\n"
+//            for (j in i.listFiles()) {
+//                txt += j.readText()
+//                txt += "\n"
+//            }
+//            txt += "\n"
+//        }
+//    }
 
 //    logFile.walkTopDown().forEach { if (it.isFile) println(it.readText()) else println("commit ${it.name}") }
 //    println(logFile.listFiles().map { it.name })
-    return txt
+//    return txt
 }
 
 fun ByteArray.toHex(): String {
@@ -141,8 +164,8 @@ fun main(args: Array<String>) {
         "config" -> println(if (args.size > 1) config(args[1]) else config())
         "--help" -> println(help)
         "add" -> if (args.size > 1) add(args[1]) else add()
-        "log" -> println("Show commit logs.")
-        "commit" -> println("Save changes.")
+        "log" -> println(log())
+        "commit" -> if (args.size > 1) commit(args[1]) else commit()
         "checkout" -> println("Restore a file.")
         null -> println(help)
         else -> println("'${args.first()}' is not a SVCS command.")
