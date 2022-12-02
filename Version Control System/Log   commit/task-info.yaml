@@ -376,40 +376,15 @@ files:
         }
     }
   learner_created: false
+- name: file335.txt
+  visible: true
+  learner_created: true
+- name: file951.txt
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/13044#comment
-status: Failed
+status: Solved
 feedback:
-  message: |-
-    Wrong answer in test #7
-
-    Your program should output &quot;Nothing to commit.&quot;,
-    but printed: &quot;Changes are committed.
-    &quot;
-
-    Please find below the output of your program during this failed test.
-
-    ---
-
-    Arguments for MainKt: config Marie761
-    Arguments for MainKt: add first_file.txt
-    Arguments for MainKt: add second_file.txt
-    Arguments for MainKt: log
-    Arguments for MainKt: commit
-    Arguments for MainKt: commit &quot;Test message&quot;
-    Arguments for MainKt: log
-    Arguments for MainKt: commit &quot;Test message2&quot;
-
-    The username is Marie761.
-    Add a file to the index.
-    The file &#39;second_file.txt&#39; is tracked.
-    No commits yet.
-    Message was not passed.
-    Changes are committed.
-    commit 82dfa5549ebc9afc168eb7931ebece5f
-    Author: Marie761
-    Test message
-
-
-    Changes are committed.
-  time: "Thu, 01 Dec 2022 17:23:34 UTC"
+  message: Congratulations!
+  time: "Fri, 02 Dec 2022 19:38:58 UTC"
 record: -1
