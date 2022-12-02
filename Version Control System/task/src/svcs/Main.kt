@@ -3,7 +3,7 @@ package svcs
 import java.io.File
 import java.security.MessageDigest
 
-var committed = File("vcs\\commited.txt")
+var committed = File("vcs\\committed.txt")
 
 fun config(name: String = ""): String {
     val file = File("vcs\\config.txt")
@@ -99,10 +99,12 @@ fun commit(message: String = "") {
             val file2 = File("vcs\\commits\\${message.toMD5()}\\${mess[i].split(" ")[0]}")
             if (!file2.exists()) {
                 file2.createNewFile()
-                file2.writeText("Author: $author\n")
+                file2.writeText("commit ${message.toMD5()}\n")
+                file2.appendText("Author: $author\n")
                 file2.appendText(message)
             } else {
-                file2.writeText("Author: $author\n")
+                file2.writeText("commit ${message.toMD5()}\n")
+                file2.appendText("Author: $author\n")
                 file2.appendText(message)
             }
         }
@@ -115,7 +117,6 @@ fun commit(message: String = "") {
 
 fun log(): String {
     val logFile = File("vcs\\log.txt")
-    var txt = ""
 
     if (!logFile.exists())  return "No commits yet."
     if (logFile.isFile && logFile.readText().isEmpty()) return "No commits yet."
@@ -132,6 +133,38 @@ fun String.toMD5(): String {
     return bytes.toHex()
 }
 
+fun checkout(commitID: String = "") {
+    val logFile = File("vcs\\log.txt")
+    var exist = false
+
+    if (!logFile.exists()) {
+        println("Commit does not exist.")
+        return
+    }
+    if (commitID == "") {
+        println("Commit id was not passed.")
+        return
+    }
+
+
+    val commitFile = File("vcs\\commits\\$commitID")
+/*    val log = logFile.readLines()
+    for (l in log) {
+        if (l == "commit $commitID") {
+            exist = true
+        }
+    }
+    */
+    if (commitFile.exists()) {
+        print("Switched to commit $commitID.")
+
+        for (f in commitFile.listFiles()) {
+            File("${f.name}").writeText(f.readText())
+        }
+    } else {
+        println("Commit does not exist.")
+    }
+}
 fun main(args: Array<String>) {
 
     val file = File("vcs")
@@ -147,6 +180,16 @@ fun main(args: Array<String>) {
             "commit     Save changes.\n" +
             "checkout   Restore a file."
 
+    //checkout("82dfa5549ebc9afc168eb7931ebece5f")
+/*    config ("Christine2")
+    add ("first_file.txt")
+    add ("second_file.txt")
+    commit ("First commit")
+    commit ("Second commit")
+    checkout()
+    checkout ("wrongId")
+    log()
+    checkout ("32877ad7b71db068b968af65af2ebdc9")*/
 
     when (args.firstOrNull()) {
         "config" -> println(if (args.size > 1) config(args[1]) else config())
@@ -154,7 +197,7 @@ fun main(args: Array<String>) {
         "add" -> if (args.size > 1) add(args[1]) else add()
         "log" -> println(log())
         "commit" -> if (args.size > 1) commit(args[1]) else commit()
-        "checkout" -> println("Restore a file.")
+        "checkout" -> if (args.size > 1) checkout(args[1]) else checkout()
         null -> println(help)
         else -> println("'${args.first()}' is not a SVCS command.")
     }

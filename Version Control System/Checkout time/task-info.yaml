@@ -462,6 +462,46 @@ files:
         }
     }
   learner_created: false
+- name: "${l.name}"
+  visible: true
+  learner_created: true
+- name: first_file.txt
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/13045#comment
-status: Unchecked
+status: Failed
+feedback:
+  message: |-
+    Wrong answer in test #8
+
+    Wrong content of the tracked files after checkout
+
+    Please find below the output of your program during this failed test.
+
+    ---
+
+    Arguments for MainKt: config Anna289
+    Arguments for MainKt: add first_file.txt
+    Arguments for MainKt: add second_file.txt
+    Arguments for MainKt: commit &quot;First commit&quot;
+    Arguments for MainKt: commit &quot;Second commit&quot;
+    Arguments for MainKt: checkout
+    Arguments for MainKt: checkout wrongId
+    Arguments for MainKt: log
+    Arguments for MainKt: checkout 32877ad7b71db068b968af65af2ebdc9
+
+    The username is Anna289.
+    Add a file to the index.
+    The file &#39;second_file.txt&#39; is tracked.
+    Changes are committed.
+    Nothing to commit.
+    Commit id was not passed.
+    Commit does not exist.
+    commit 32877ad7b71db068b968af65af2ebdc9
+    Author: Anna289
+    First commit
+
+
+    Switched to commit 32877ad7b71db068b968af65af2ebdc9.
+  time: "Fri, 02 Dec 2022 20:54:44 UTC"
 record: -1
